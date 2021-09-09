@@ -1,0 +1,15 @@
+{
+    "name": "Fran",
+    "desc": "Software Developer",
+    "image": "https://i.imgur.com/d4J0hlj.png",
+    "title": "{Name} - {Desc}",
+    "theme-color": "#1F2937",
+    "links": [
+        {"url": "https://tiktok.com/", "display": "fab fa-tiktok"},
+        {"url": "https://discord.com/", "display": "fab fa-discord"},
+        {"url": "https://twitch.tv/", "display": "fab fa-twitch"},
+        {"url": "https://youtube.com/", "display": "fab fa-youtube"},
+        {"url": "https://twitter.com/", "display": "fab fa-twitter"},
+        {"url": "https://paypal.com/", "display": "fab fa-paypal"}
+    ]
+}
