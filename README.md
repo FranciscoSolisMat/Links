@@ -13,6 +13,7 @@ Simple Links Website
 # Configuration
 - `name`: Your name (Used as variable in the title)
 - `desc`: A short description for you (Used as variable in the title)
+- `image`: A direct link to your profile image (Used in the site icon and the site links page)
 - `title`: The website title (You may use `{Name}` and `{Desc}` as variables)
 - `theme-color`: The background color for the site
 - `links`: A list with the icons and links.
