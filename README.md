@@ -1,6 +1,3 @@
-# Links
-Simple Links Website
-
 # Preview
 ![](https://i.imgur.com/b2zv3Rg.png)
 
