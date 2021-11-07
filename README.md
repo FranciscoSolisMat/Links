@@ -53,3 +53,6 @@ You may [check the issues](https://github.com/FranciscoSolisMat/Links/issues) fo
 
 # Where to find the FontAwesome class?
 ![](https://i.imgur.com/D8CjZue.png)
+  
+# How to update the project?
+I would recommend you to download the zip of this code, modify the settings and then upload your data to github
