@@ -3,13 +3,29 @@
     "desc": "Software Developer",
     "image": "https://i.imgur.com/d4J0hlj.png",
     "title": "{Name} - {Desc}",
-    "theme-color": "#1F2937",
+    "theme-settings": {
+        "background-color": "#1F2937",
+        "text-color": "#FFFFFF"
+    },
     "links": [
-        {"url": "https://tiktok.com/", "display": "fab fa-tiktok"},
-        {"url": "https://discord.com/", "display": "fab fa-discord"},
-        {"url": "https://twitch.tv/", "display": "fab fa-twitch"},
-        {"url": "https://youtube.com/", "display": "fab fa-youtube"},
-        {"url": "https://twitter.com/", "display": "fab fa-twitter"},
-        {"url": "https://paypal.com/", "display": "fab fa-paypal"}
-    ]
+        {"url": "https://github.com/FranciscoSolisMat", "display": "fab fa-github"},
+        {"url": "https://www.tiktok.com/@im.just.fran", "display": "fab fa-tiktok"},
+        {"url": "https://discord.gg/cAfaG7nJ62", "display": "fab fa-discord"},
+        {"url": "https://twitch.tv/imjustfran", "display": "fab fa-twitch"},
+        {"url": "https://twitter.com/Im_Fran_", "display": "fab fa-twitter"},
+        {"url": "https://paypal.com/programsrc", "display": "fab fa-paypal"}
+    ],
+    "repo": "FranciscoSolisMat/Links",
+    "project-list-settings": {
+        "background-color": "#5271FF",
+        "title": {
+            "color": "#FFFFFF",
+            "font-size": "1.5rem",
+            "bold": true
+        },
+        "description": {
+            "color": "#FFFFFF",
+            "font-size": "1rem"
+        }
+    }
 }
