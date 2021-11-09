@@ -71,56 +71,58 @@ const loadProjects = (repo) => {
                 const projects = document.getElementById('projects');
                 const div = document.createElement('div');
                 const data = item.body.replaceAll('\n', ':split:').replaceAll('\r', '').replaceAll('\n', '').split(':split:');
-                div.classList.add('flex', 'flex-row', 'items-center', 'p-2', 'w-full', 'rounded-lg', 'transition-all', 'duration-500', 'hover:shadow-2xl', 'cursor-pointer', 'mb-5');
-                div.style.backgroundColor = window.config['project-list-settings']['background-color'];
-                div.id = 'project-' + item.number;
-                const div2 = document.createElement('div');
-                div2.classList.add('flex', 'flex-col')
-                const h1 = document.createElement('h1');
-                if (window.config['project-list-settings']['title']['bold']) { h1.classList.add('font-bold'); }
-                h1.style.fontSize = window.config['project-list-settings']['title']['font-size'];
-                h1.style.color = window.config['project-list-settings']['title']['color'];
-                h1.innerText = item.title;
-                const p = document.createElement('p');
-                p.style.fontSize = window.config['project-list-settings']['description']['font-size'];
-                p.style.color = window.config['project-list-settings']['description']['color'];
-                data.forEach(i2 => {
-                    if (i2.startsWith('body:')) {
-                        p.innerText = i2.replace('body:', '');
-                    } else if (i2.startsWith('url:')) {
-                        div.onclick = () => window.open(i2.replace('url:', ''), '_blank');
-                    }
-                });
-                let added = false
-                data.forEach(i1 => {
-                    if(!added){
-                        if(i1.startsWith('icon:')){
-                            let icon = i1.replace('icon:', '');
-                            if(icon && icon !== 'none' && icon !== 'null'){
-                                const img = document.createElement('img');
-                                img.src = icon
-                                img.classList.add('w-16', 'h-16', 'rounded-full')
-                                div.appendChild(img);
-                                div2.classList.add('ml-4')
-                                added = true;
-                            }
-                        }else if(i1.startsWith('fontawesomeicon:')){
-                            let icon = i1.replace('fontawesomeicon:', '');
-                            if(icon && icon !== 'none' && icon !== 'null'){
-                                const i = document.createElement('i');
-                                i.classList.add('fas', 'fa-5x', 'rounded-full')
-                                icon.split(' ').forEach(_class => i.classList.add(_class));
-                                div.appendChild(i);
-                                div2.classList.add('ml-4')
-                                added = true;
+                if(item.labels.find(label => label.name === 'project-list')){
+                    div.classList.add('flex', 'flex-row', 'items-center', 'p-2', 'w-full', 'rounded-lg', 'transition-all', 'duration-500', 'hover:shadow-2xl', 'cursor-pointer', 'mb-5');
+                    div.style.backgroundColor = window.config['project-list-settings']['background-color'];
+                    div.id = 'project-' + item.number;
+                    const div2 = document.createElement('div');
+                    div2.classList.add('flex', 'flex-col')
+                    const h1 = document.createElement('h1');
+                    if (window.config['project-list-settings']['title']['bold']) { h1.classList.add('font-bold'); }
+                    h1.style.fontSize = window.config['project-list-settings']['title']['font-size'];
+                    h1.style.color = window.config['project-list-settings']['title']['color'];
+                    h1.innerText = item.title;
+                    const p = document.createElement('p');
+                    p.style.fontSize = window.config['project-list-settings']['description']['font-size'];
+                    p.style.color = window.config['project-list-settings']['description']['color'];
+                    data.forEach(i2 => {
+                        if (i2.startsWith('body:')) {
+                            p.innerText = i2.replace('body:', '');
+                        } else if (i2.startsWith('url:')) {
+                            div.onclick = () => window.open(i2.replace('url:', ''), '_blank');
+                        }
+                    });
+                    let added = false
+                    data.forEach(i1 => {
+                        if(!added){
+                            if(i1.startsWith('icon:')){
+                                let icon = i1.replace('icon:', '');
+                                if(icon && icon !== 'none' && icon !== 'null'){
+                                    const img = document.createElement('img');
+                                    img.src = icon
+                                    img.classList.add('w-16', 'h-16', 'rounded-full')
+                                    div.appendChild(img);
+                                    div2.classList.add('ml-4')
+                                    added = true;
+                                }
+                            }else if(i1.startsWith('fontawesomeicon:')){
+                                let icon = i1.replace('fontawesomeicon:', '');
+                                if(icon && icon !== 'none' && icon !== 'null'){
+                                    const i = document.createElement('i');
+                                    i.classList.add('fas', 'fa-5x', 'rounded-full')
+                                    icon.split(' ').forEach(_class => i.classList.add(_class));
+                                    div.appendChild(i);
+                                    div2.classList.add('ml-4')
+                                    added = true;
+                                }
                             }
                         }
-                    }
-                });
-                div2.appendChild(h1);
-                div2.appendChild(p);
-                div.appendChild(div2);
-                projects.appendChild(div);
+                    });
+                    div2.appendChild(h1);
+                    div2.appendChild(p);
+                    div.appendChild(div2);
+                    projects.appendChild(div);
+                }
             });
         }
     }).catch(ignored => { });
