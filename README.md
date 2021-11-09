@@ -48,6 +48,8 @@ url:somerandomurl
 - `url`: The url of the project card, set to none or remove at all to remove the url. This url will be used when someone clicks the card
 
 > Remember to use only the icon _OR_ the fontawesome icon, not both. By default the icon will have priority
+  
+Finally you need to add the label with name `project-list` to add it to the list, this way we won't have unwanted issues on the list
 
 You may [check the issues](https://github.com/FranciscoSolisMat/Links/issues) for the project list to see how it works.
 
